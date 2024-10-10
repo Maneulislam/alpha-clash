@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme = 'light'>
 
 <head>
     <meta charset="UTF-8">
@@ -20,14 +20,14 @@
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat 
       bg-center 	">
 
-                <!-- First page  -->
+        <!-- First page  -->
 
-        <section class="first-page min-h-screen flex  justify-center items-center hidden ">
+        <section id="first-page" class=" min-h-screen flex  justify-center items-center  ">
 
             <div class=" flex flex-col items-center gap-14 ">
                 <h1 class="text-9xl font-semibold text-white font-poppins ">ALPHABET CLASH</h1>
                 <p class="text-3xl text-white ">Unleash Your Keyboard Kung Fu : Press "Enter" To Play</p>
-                <button class="bg-white text-black text-2xl font-bold px-7 py-5 rounded-md ">Play Now</button>
+                <button onclick="play()" class="bg-white text-black text-2xl font-bold px-7 py-5 rounded-md ">Play Now</button>
             </div>
 
 
@@ -36,51 +36,78 @@
 
         <!-- Second page  -->
 
-        <section class="second-page">
+        <section id="second-page" class=" hidden ">
 
 
+            <div class="flex flex-col items-center h-full p-28 gap-24">
                 <div class="artboard artboard-horizontal phone-6 border-[20px] border-black 
                  bg-[#FFFFFFB3]   m-auto ">
-                    1024×320
+                    <p class="bg-black text-white rounded-b-2xl text-xl mx-72 text-center pb-4">Don't watch keyboard
+                        while playing...</p>
+                    <p id="alphabet-screen" class=" flex text-black justify-center text-center items-center h-full text-8xl font-bold pb-14 uppercase">
+                        Y</p>
                 </div>
 
-            <div>
-                <div class="my-1 flex w-full justify-center gap-1">
-                    <kbd class="kbd">q</kbd>
-                    <kbd class="kbd">w</kbd>
-                    <kbd class="kbd">e</kbd>
-                    <kbd class="kbd">r</kbd>
-                    <kbd class="kbd">t</kbd>
-                    <kbd class="kbd">y</kbd>
-                    <kbd class="kbd">u</kbd>
-                    <kbd class="kbd">i</kbd>
-                    <kbd class="kbd">o</kbd>
-                    <kbd class="kbd">p</kbd>
-                  </div>
-                  <div class="my-1 flex w-full justify-center gap-1">
-                    <kbd class="kbd">a</kbd>
-                    <kbd class="kbd">s</kbd>
-                    <kbd class="kbd">d</kbd>
-                    <kbd class="kbd">f</kbd>
-                    <kbd class="kbd">g</kbd>
-                    <kbd class="kbd">h</kbd>
-                    <kbd class="kbd">j</kbd>
-                    <kbd class="kbd">k</kbd>
-                    <kbd class="kbd">l</kbd>
-                  </div>
-                  <div class="my-1 flex w-full justify-center gap-1">
-                    <kbd class="kbd">z</kbd>
-                    <kbd class="kbd">x</kbd>
-                    <kbd class="kbd">c</kbd>
-                    <kbd class="kbd">v</kbd>
-                    <kbd class="kbd">b</kbd>
-                    <kbd class="kbd">n</kbd>
-                    <kbd class="kbd">m</kbd>
-                    <kbd class="kbd">/</kbd>
-                  </div>
-            </div>
-            <div>
 
+                <!-- keyboard -->
+                <div class="">
+                    <div class="my-1 flex w-full justify-center gap-1">
+                        <kbd id="q" class="kbd">q</kbd>
+                        <kbd id="w" class="kbd">w</kbd>
+                        <kbd id="e" class="kbd">e</kbd>
+                        <kbd id="r" class="kbd">r</kbd>
+                        <kbd id="t" class="kbd">t</kbd>
+                        <kbd id="y" class="kbd">y</kbd>
+                        <kbd id="u" class="kbd">u</kbd>
+                        <kbd id="i" class="kbd">i</kbd>
+                        <kbd id="o" class="kbd">o</kbd>
+                        <kbd id="p" class="kbd">p</kbd>
+                    </div>
+                    <div class="my-1 flex w-full justify-center gap-1">
+                        <kbd id="a" class="kbd">a</kbd>
+                        <kbd id="s" class="kbd">s</kbd>
+                        <kbd id="d" class="kbd">d</kbd>
+                        <kbd id="f" class="kbd">f</kbd>
+                        <kbd id="g" class="kbd">g</kbd>
+                        <kbd id="h" class="kbd">h</kbd>
+                        <kbd id="j" class="kbd">j</kbd>
+                        <kbd id="k" class="kbd">k</kbd>
+                        <kbd id="l" class="kbd">l</kbd>
+                    </div>
+                    <div class="my-1 flex w-full justify-center gap-1">
+                        <kbd id="z" class="kbd">z</kbd>
+                        <kbd id="x" class="kbd">x</kbd>
+                        <kbd id="c" class="kbd">c</kbd>
+                        <kbd id="v" class="kbd">v</kbd>
+                        <kbd id="b" class="kbd">b</kbd>
+                        <kbd id="n" class="kbd">n</kbd>
+                        <kbd id="m" class="kbd">m</kbd>
+                        <kbd id="/" class="kbd">/</kbd>
+                    </div>
+                </div>
+                <div class="flex space-x-[800px]">
+
+                    <button class="btn bg-purple-500 px-10 rounded-full text-white text-xl 	">
+                        Life
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                        1
+                    </button>
+
+                    <button class="btn bg-purple-700 px-10 rounded-full text-white text-xl">
+                        Score
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                        1
+                    </button>
+
+                </div>
             </div>
 
 
@@ -89,7 +116,18 @@
 
         <!-- Third page  -->
 
-        <section class="third-page">
+        <section id="third-page" class=" hidden ">
+
+            <div class="text-white flex flex-col justify-center items-center min-h-screen ">
+                <div class="bg-[#FFFFFF33] text-center p-20 rounded-3xl ">
+                    <h1 class="mb-10" >
+                        <span class="text-7xl font-extrabold">Score :</span>
+                        <span class="text-6xl font-semibold">  14</span>
+                    </h1>
+                    <button class=" py-4 rounded-md px-6 text-2xl bg-white text-black mb-10">Play Again</button>
+                    <p class="text-2xl ">Practice will make you pro</p>
+                </div>
+            </div>
 
 
         </section>
@@ -98,6 +136,10 @@
 
     </main>
 
+
+
+    <!-- JS link -->
+     <script src="script.js"></script>
 </body>
 
 </html>
